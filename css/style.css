@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #ffb703;
+    --secondary-color: #023047;
+    --accent-color: #2a9d8f;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.custom-slider-viewport {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.custom-slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.custom-slider-card {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .custom-slider-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.promo-card {
+    min-height: 190px;
+    border-radius: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.promo-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.product-img-wrapper {
+    height: 140px;
+    background: #f1f3f5;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #6c757d;
+}
+
+.category-btn {
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cart-badge {
+    font-size: 0.75rem;
+}
